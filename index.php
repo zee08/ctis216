@@ -67,50 +67,44 @@ background-color: #f1f1f1;}
 	</form>
 	<?php
 
-session_start();
-$username = filter_input(INPUT_POST,'username');
-$password = filter_input(INPUT_POST,'password');
+$username = filter_input(INPUT_POST, 'username');
+$password = filter_input(INPUT_POST, 'password');
 
 
 
-// DB connection
-$con = new mysqli("localhost", "root", "" , "ctis");
-// Check connection
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-} 
-/*function function_alert($message) { 
-      
-    // Display the alert box  
-    echo "<script>alert('$message');</script>"; 
-} */
+
+if(!empty($username)){
+  if(!empty($password)){
+    $host = "localhost";
+    $dbusername ="root";
+    $dbpassword = "";
+    $dbname = "ctis";
+    
   
+
   
-// Function call 
+    $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
-// Query
-$sql = "select * from login where username = '$username' and password = '$password'";
-
-
-$result = $con->query($sql);
-
-//echo " query " . $sql . $result->num_rows ;
-if($result->num_rows > 0) {
-	echo " Login is successful";
-	header("Location: regCentre.php");
-  
-	}
-else {
-	
-	echo "<script>alert('invalid login');</script>";
-
- 
-
-	
-}
-
-
-//
+    if(mysqli_connect_error()){
+      die('connect error( '.mysqli_connect_errno().')' .mysqli_connect_error());
+    }
+    else{
+      $sql = "select * from login where username = '$username' and password = '$password'";
+        $result = $conn->query($sql);
+      if($result->num_rows > 0){
+        echo "Login is successful";
+        header("Location: regCentre.php");
+      } else
+        echo"<script>alert('invalid login');</script>";
+      //''.$sql .'<br>'. $conn->error;
+        
+          
+      $conn->close();
+    }
+  }else{
+    echo'address should not be emp';
+    die();  
+    }}
 
 
 ?> 
