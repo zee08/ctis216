@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Tester Main</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainfocus {
+            width: 400px;
+            border: solid 1px #EBEBEB;
+            padding: 2rem 1rem;
+            background-color: rgb(201,201,197);
+        }
+
+        .header {
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .signOut {
+            color: white;
+            background-color: red;
+            font-weight: bold;
+            font-size: larger;
+            border-color: black;
+            padding: 15px 25px;
+        }
+
+        .buttonDesign {
+            padding: 10px 25px;
+            font-size: medium;
+        }
+
+        .newpat {
+            padding: 10px 49px;
+            font-size: medium;
+        }
+
+        .existpat {
+            padding: 10px 44px;
+            font-size: medium;
+        }
+
+        h1{
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body style="background-image : url(doctor-blur.png); background-repeat:no-repeat; background-size: 100%">
+
+    <main>
+        <h1>Main Menu - Tester</h1>
+        <div class="mainfocus">
+            <p class="header">Record New Test</p>
+            <a href="NewPatient.html" class="w3-button w3-black w3-hover-purple w3-round-xxlarge">New Patient</a>
+            <a href="ExistingPatient.html" class="w3-button w3-black w3-hover-purple w3-round-xxlarge">Existing Patient</a>
+
+            <br />
+            <p class="header"> Test Result</p>
+            <a href="UpdateResult.html" class="w3-button w3-black w3-hover-purple w3-round-xxlarge">Update Test Result</a>
+            <a href="#" class="w3-button w3-black w3-hover-purple w3-round-xxlarge">Generate Test Result</a>
+        </div>
+        <br />
+        <br />
+        <a href="#" class="w3-button w3-red w3-xlarge">Sign Out</a>
+    </main>
+
+    <script src="function.js"></script>
+
+ 
+
+</body>
+</html>

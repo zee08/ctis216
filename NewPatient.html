@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>New Patient</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 400px;
+            border: solid 1px #EBEBEB;
+            padding: 3rem;
+            background-color: rgb(201,201,197);
+        }
+
+        button {
+            margin-top: 2rem;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .textfield {
+            padding: 5px 117px 5px 1px;
+        }
+
+        #PatientType {
+            padding: 7px 86px;
+            font-size: 17px;
+        }
+
+        #submit {
+            background-color: darkslategrey;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        #reset {
+            padding: 10px 20px;
+        }
+
+        #cancel {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body style="background-image : url(doctor-blur.png); background-repeat:no-repeat; background-size: 100%">
+    <main>
+        <h1>New Patient - Record Test</h1>
+        <form>
+            <label id="label" for="fname">Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" class="textfield" id="name" name="fname" />
+            <br /> <br /><br />
+
+            <label id="label" for="user">Username: &nbsp;&nbsp;</label>
+            <input type="text" class="textfield" id="user" name="user" />
+            <br /> <br /><br />
+
+            <label id="label" for="pass">Password: &nbsp;&nbsp;&nbsp;</label>
+            <input type="password" class="textfield" id="pass" name="pass" />
+            <br /> <br /><br />
+
+            <div class="custom-select" style="width:200px;">
+                <select name="PatientType" id="PatientType">
+                    <option value="Patient Type">[Patient Type]</option>
+                    <option value="Retunee">Returnee</option>
+                    <option value="Quarantined">Quarantined</option>
+                    <option value="Close Contact">Close Contact</option>
+                    <option value="Infected">Infected</option>
+                    <option value="Suspected">Suspected</option>
+                </select>
+            </div>
+            <br /><br />
+
+            <label id="label" for="symptom">Symptoms: &nbsp;&nbsp;</label>
+            <input type="text" class="textfield" id="symptom" name="symptom" />
+            <br /> <br /><br />
+
+            <input id="submit" type="submit" value="Submit" onclick="reset" />
+            <input id="reset" type="reset" value="Reset" />
+            <a href="Tester_Main.html" class="w3-button w3-white w3-large">Cancel</a>
+        </form>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzDQ5BjQUY9HIImk8l4Dqd1FEl2mL5yv8",
+            authDomain: "ctis-helptech.firebaseapp.com",
+            databaseURL: "https://ctis-helptech.firebaseio.com",
+            projectId: "ctis-helptech",
+            storageBucket: "ctis-helptech.appspot.com",
+            messagingSenderId: "129119137194",
+            appId: "1:129119137194:web:275c47ac5bb316a6ba8fd3",
+            measurementId: "G-P038BD4PM7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="function.js"></script>
+
+</body>
+</html>

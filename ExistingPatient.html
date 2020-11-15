@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Existing Patient</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 400px;
+            border: solid 1px #EBEBEB;
+            padding: 3rem;
+            background-color: rgb(201,201,197);
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .textfield {
+            padding: 2px;
+            margin: 5px;
+            width: -webkit-fill-available;
+        }
+
+        #search{
+            padding: 3px 95px;
+            color: white;
+            background-color: darkslategray;
+        }
+        #PatientType{
+            padding: 4px 87px;
+        }
+
+        #submit {
+            padding: 8px 39px;
+            
+        }
+
+        h1{
+            font-weight:bold;
+            font-size:47px;
+        }
+
+    </style>
+</head>
+<body style="background-image : url(doctor-blur.png); background-repeat:no-repeat; background-size: 100%">
+    <main>
+        <h1>Record Test - Existing Patient</h1>
+        <form>
+            <label id="label" for="user">Username: </label>
+            <input type="text" class="textfield" id="user" name="user" />
+
+            <input type="button" id="search" value="Search Patient" />
+            <br /><br /><br />
+
+            <select name="PatientType" id="PatientType" disabled>
+                <option value="Patient Type">[Patient Type]</option>
+                <option value="Retunee">Returnee</option>
+                <option value="Quarantined">Quarantined</option>
+                <option value="Close Contact">Close Contact</option>
+                <option value="Infected">Infected</option>
+                <option value="Suspected">Suspected</option>
+            </select>
+            <br /> <br /><br />
+
+            <label id="label" for="symptom">Symptoms: </label>
+            <input type="text" class="textfield" id="symptom" name="symptom" disabled/>
+            <br /> <br /><br />
+
+            <input id="submit" type="submit" value="Submit New Test" disabled />
+            <a href="Tester_Main.html" class="w3-button w3-white w3-large">Cancel</a>
+
+        </form>
+    </main>
+</body>
+</html>

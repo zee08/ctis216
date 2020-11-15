@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Update Test</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 400px;
+            border: solid 1px #EBEBEB;
+            padding: 3rem;
+            background-color: rgb(201,201,197);
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #testID {
+            padding: 2px;
+            margin: 6px;
+        }
+
+        #result{
+            padding: 4px 73px;
+            font-size: 16px;
+        }
+
+        #searchID{
+            padding: 6px 95px;
+            background-color: darkslategray;
+            color: white;
+        }
+
+        #update{
+            padding: 9px;
+            font-size: medium;
+        }
+
+        h1{
+            font-weight: bold;
+            font-size: 65px;
+        }
+
+    </style>
+
+</head>
+<body style="background-image : url(doctor-blur.png); background-repeat:no-repeat; background-size: 100%">
+    <main>
+        <h1>Update Result</h1>
+        <form>
+            <label id="label" for="test">TestID: </label>
+            <input type="text" id="testID" name="TestID" />
+
+            <input type="button" id="searchID" value="Search TestID" />
+            <br /><br /><br />
+
+            <select name="result" id="result" disabled>
+                <option value="result">[Choose Result]</option>
+                <option value="Positive">Positive</option>
+                <option value="Negative">Negative</option>
+            </select>
+            <br /> <br /><br />
+
+            <input id="update" type="submit" value="Update Test Result" />
+            <a href="Tester_Main.html" class="w3-button w3-white w3-large">Cancel</a>
+
+        </form>
+    </main>
+
+    
+
+</body>
+</html>
